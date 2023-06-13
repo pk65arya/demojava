@@ -1,0 +1,24 @@
+package com.basicjava;
+
+import java.util.Scanner;
+
+public class Springseason {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the month and day");
+        int m=sc.nextInt();
+        int d=sc.nextInt();
+        if(m==3&&d>=20&&d<=31){
+            System.out.println("True");
+        }
+        else if(m==4&&d>=1&&d<=30) {
+            System.out.println("True");
+        } else if (m==5&&d>=1&&d<=31) {
+            System.out.println("True");
+        } else if (m==6&&d>=1&&d<=20) {
+            System.out.println("True");
+        }else {
+            System.out.println("false");
+        }
+    }
+}
