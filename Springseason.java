@@ -4,21 +4,24 @@ import java.util.Scanner;
 
 public class Springseason {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the month and day");
-        int m=sc.nextInt();
-        int d=sc.nextInt();
-        if(m==3&&d>=20&&d<=31){
-            System.out.println("True");
+      //  Scanner sc=new Scanner(System.in);
+      //  System.out.println("enter the month and day");
+     //   int m=Integer.parseInt(args[0]);
+   //     int d=Integer.parseInt(args[1]);
+        if (args.length <2) {
+            System.out.println("Please provide two command-line arguments: month and day.");
+            return;
         }
-        else if(m==4&&d>=1&&d<=30) {
-            System.out.println("True");
-        } else if (m==5&&d>=1&&d<=31) {
-            System.out.println("True");
-        } else if (m==6&&d>=1&&d<=20) {
-            System.out.println("True");
-        }else {
-            System.out.println("false");
-        }
+
+        int month = Integer.parseInt(args[0]);
+        int day = Integer.parseInt(args[1]);
+
+        boolean isSpringSeason = (month == 3 && day >= 20 && day <= 31) ||
+                (month == 4 && day >= 1 && day <= 30) ||
+                (month == 5 && day >= 1 && day <= 31) ||
+                (month == 6 && day >= 1 && day < 20);
+
+        System.out.println(isSpringSeason);
+
     }
 }
